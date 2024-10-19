@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.a2.WeatherAlertController" >
+    <Label text="Weather and Alerts"/>
+    <HBox spacing="10">
+        <TextField fx:id="locationField" promptText="Enter Location"/>
+        <Button text="Get Weather" onAction="#handleGetWeather"/>
+    </HBox>
+    <TextArea fx:id="weatherInfoArea" editable="false" wrapText="true"/>
+    <Label text="Active Alerts"/>
+    <ListView fx:id="alertListView"/>
+    <Button text="Refresh Alerts" onAction="#handleRefreshAlerts"/>
+    <Button text="to home page" fx:id = "home" onAction="#handleHomeButton"/>
+</VBox>

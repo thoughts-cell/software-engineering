@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.a2.ResponseCoordinationController">
+    <Label text="Response Coordination"/>
+    <HBox spacing="10">
+        <ComboBox fx:id="departmentComboBox" promptText="Select Department"/>
+        <ComboBox fx:id="activityComboBox" promptText="Select Activity"/>
+    </HBox>
+    <TextArea fx:id="messageTextArea" promptText="Enter message" wrapText="true"/>
+    <Button text="Send Message" onAction="#handleSendMessage"/>
+    <Button text="to home page" fx:id = "home" onAction="#handleHomeButton"/>
+    <ListView fx:id="communicationLogListView"/>
+
+    <Separator/>
+
+    <Label text="Task Management"/>
+    <HBox spacing="10">
+        <TextField fx:id="taskDescriptionField" promptText="Task Description"/>
+        <ComboBox fx:id="taskAssigneeComboBox" promptText="Assign To"/>
+        <Button text="Add Task" onAction="#handleAddTask"/>
+
+    </HBox>
+    <TableView fx:id="taskTableView">
+        <columns>
+            <TableColumn text="Description" fx:id="taskDescriptionColumn"/>
+            <TableColumn text="Assigned To" fx:id="taskAssigneeColumn"/>
+        </columns>
+    </TableView>
+</VBox>
+

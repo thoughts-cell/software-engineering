@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" style="-fx-padding: 10;" vgap="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a2.DisasterReportController">
+    <Label text="Disaster Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <ComboBox fx:id="typeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Fire" />
+                <String fx:value="Earthquake" />
+                <String fx:value="Flood" />
+                <String fx:value="Tornado" />
+                <String fx:value="Hurricane" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="locationInput" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Severity:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <ComboBox fx:id="severityComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Low" />
+                <String fx:value="Moderate" />
+                <String fx:value="High" />
+                <String fx:value="Severe" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextArea fx:id="descriptionInput" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Button onAction="#handleSubmitButtonAction" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+   <Button fx:id="assess" onAction="#toAssesssment" text="Assess Disaster" GridPane.rowIndex="5" />
+   <Button fx:id="coord" onAction="#toCoordination" text="Coordination" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   <Button fx:id="weather" text="Weather Alert" GridPane.rowIndex="4" onAction="#toWeather" />
+
+   <columnConstraints>
+      <ColumnConstraints maxWidth="559.4" minWidth="320.0" prefWidth="559" />
+      <ColumnConstraints maxWidth="573.3" minWidth="334" prefWidth="333" />
+   </columnConstraints>
+   <rowConstraints>
+
+      <RowConstraints maxHeight="176.0" minHeight="31.0" prefHeight="108.0" />
+      <RowConstraints maxHeight="198.0" minHeight="53.0" prefHeight="121.0" />
+      <RowConstraints maxHeight="198.0" minHeight="53.0" prefHeight="121.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

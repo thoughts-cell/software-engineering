@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.a2.DisasterAssessmentController" >
+    <Label text="Disaster Assessment"/>
+    <TableView fx:id="disasterTableView">
+        <columns>
+            <TableColumn fx:id="typeColumn" text="Type"/>
+            <TableColumn fx:id="locationColumn" text="Location"/>
+            <TableColumn fx:id="severityColumn" text="Severity"/>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+        </columns>
+    </TableView>
+    <Button text="Assess Selected Disaster" onAction="#handleAssessDisaster"/>
+    <Button text="back" fx:id = "back" onAction="#handleBackButton"/>
+    <Button text="Coordination" fx:id = "coordination" onAction="#handleCoordButton"/>
+
+    <Label fx:id="assessmentResultLabel"/>
+</VBox>

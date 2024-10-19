@@ -1,0 +1,3 @@
+set up shelter ,Jane Smith
+search and rescue,Alice Johnson
+set a shelter,Alice Johnson
